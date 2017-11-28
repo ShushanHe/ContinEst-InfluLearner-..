@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['sampleedgeweightwbl',['SampleEdgeWeightWbl',['../class_graph.html#ab8c61349953541e07fe0be3e9af4520e',1,'Graph']]],
+  ['selfinhibitingprocess',['SelfInhibitingProcess',['../class_self_inhibiting_process.html#a47347f80e1a229843aa60ee2274b44a0',1,'SelfInhibitingProcess']]],
+  ['seperatelinewordsvector',['SeperateLineWordsVector',['../_utility_8cc.html#aad6c67a09a571f669d3871a3ef438cdb',1,'SeperateLineWordsVector(const std::string &amp;lineStr, const std::string &amp;splitter):&#160;Utility.cc'],['../_utility_8h.html#aad6c67a09a571f669d3871a3ef438cdb',1,'SeperateLineWordsVector(const std::string &amp;lineStr, const std::string &amp;splitter):&#160;Utility.cc']]],
+  ['sequence',['Sequence',['../class_sequence.html#a7de35f9385287d04244ac3c5f36db00f',1,'Sequence::Sequence(const double &amp;T)'],['../class_sequence.html#a532b7e8df6ff6b2f990c14ae97859ca2',1,'Sequence::Sequence()']]],
+  ['setparameters',['SetParameters',['../class_i_process.html#a06fef183e9715749b20e9ed79cc3696e',1,'IProcess']]],
+  ['setstate',['SetState',['../class_simple_r_n_g.html#a118fe042b0670a814e4a7aa5ba459224',1,'SimpleRNG']]],
+  ['settimewindow',['SetTimeWindow',['../class_sequence.html#a0fddc7741aaa156e20227ba9f7b63a9a',1,'Sequence']]],
+  ['sgd',['SGD',['../class_optimizer.html#ab060efeff0cdcbc42f2e7a6317aa83e6',1,'Optimizer']]],
+  ['simplerng',['SimpleRNG',['../class_simple_r_n_g.html#a5321f0434d8a61a1b781bd31a64b31ab',1,'SimpleRNG']]],
+  ['simulate',['Simulate',['../class_ogata_thinning.html#a6561894d12d515d6bc820f0963252c40',1,'OgataThinning::Simulate(IProcess &amp;process, const std::vector&lt; double &gt; &amp;vec_T, std::vector&lt; Sequence &gt; &amp;sequences)'],['../class_ogata_thinning.html#a320e603196b6385a5e291a539e267db9',1,'OgataThinning::Simulate(IProcess &amp;process, const unsigned &amp;n, const unsigned &amp;num_sequences, std::vector&lt; Sequence &gt; &amp;sequences)'],['../class_plain_hawkes.html#a2174e2dac0839b16e78314592b48113b',1,'PlainHawkes::Simulate(const std::vector&lt; double &gt; &amp;vec_T, std::vector&lt; Sequence &gt; &amp;sequences)'],['../class_plain_hawkes.html#a90234f744cd5b939a7d0b966439fd659',1,'PlainHawkes::Simulate(const unsigned &amp;n, const unsigned &amp;num_sequences, std::vector&lt; Sequence &gt; &amp;sequences)'],['../class_simulator.html#aaf1a2cdbefca2a5442846d712c8a2d10',1,'Simulator::Simulate(IProcess &amp;process, const std::vector&lt; double &gt; &amp;vec_T, std::vector&lt; Sequence &gt; &amp;sequences)=0'],['../class_simulator.html#aee44b6fb894898593de5f15e6f0b397b',1,'Simulator::Simulate(IProcess &amp;process, const unsigned &amp;n, const unsigned &amp;num_sequences, std::vector&lt; Sequence &gt; &amp;sequences)=0']]],
+  ['simulatenext',['SimulateNext',['../class_ogata_thinning.html#aa490fbcb13976952a6e8613c63bc2f1c',1,'OgataThinning::SimulateNext()'],['../class_simulator.html#a1d735b0322312621f2ec8f79d3bd4a5f',1,'Simulator::SimulateNext()']]]
+];
