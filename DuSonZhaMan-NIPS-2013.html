@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset = "htf-8">
+
+		 <!-- Bootstrap -->
+    		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+	</head>
+
+	<body>
+
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+    		<script src="js/bootstrap.min.js"></script>
+
+    		<div class="container"> 
+
+    			<div class="row">
+    				<div class = "span12">
+    					<h3>Scalable Influence Estimation in Continuous-Time Diffusion Networks</h3>
+    				</div>
+    			</div>
+
+			<div class="navbar">
+	          			
+	          			<div class="navbar-inner">
+	            				
+	            				<div class="container">
+	              					
+	              					<ul class="nav">
+	                						
+	                    					<li class="active"><a href="#about">About ConTinEst</a></li>
+	                   					<li><a href="#Papers">Papers</a></li>
+						            <li><a href="#Download">Download</a></li>
+						            <li><a href="#Doc">Documentation</a></li>
+					                    	<li><a href="index.html">Contact</a></li>
+
+					              </ul>
+					 </div>
+				</div>
+			</div>
+
+
+			<div class="row">
+    				<div class = "span12">
+    					<p align="justify">
+    					We are surrounded by social and information share networks, over which diffusions of information, events, virus, takes place constantly. We can often observe that after some influential users adopt certain new product or idea, they actively influence the behaviors of their friends, which in turn makes more friends of friends adopt the product through word-of-mouth. 
+    					</p>
+
+    					<p align="justify">
+					The specific questions we seek to address in this <a href="pdf/DuSonZhaMan-NIPS-2013.pdf"><strong>NIPS 2013 paper </strong></a> is to accurately estimate the number of follow-ups which can be triggered by a given set of earlier influential users, and then to identify a set of influential users, to whom we will give promotions, in order to trigger the largest expected number of follow-ups <strong> as soon as possible </strong> ? These questions are interesting for that advertisers who want to have an efficient and effective campaign for their new products. But, they are also very challenging in that these questions are <strong> time sensitive </strong>. Intuitively, 1000 buyers in a day will be much better than 1000 buyers in a year. Furthermore, the solution must be scalable enough to deal with large real-world networks.
+					</p>
+
+    				</div>
+    			</div>
+
+    			<div class="row" id="about">
+    				<div class = "span12">
+    					<p align="justify">
+    					<h3>About ConTinEst</h3>
+					</p>
+
+					<p align="justify">
+						<strong>ConTinEst</strong> is a scalable randomized algorithm for <strong>influence estimation</strong> in <strong>continuous-time</strong> diffusion networks. It can estimate the influence of every node in a network with $|\mathcal{V}|$ nodes and $|\mathcal{E}|$ edges to an accuracy of $n=\epsilon$ using $O(1/\epsilon^2)$ randomizations and $\tilde{O}(n|\mathcal{E}| + n|\mathcal{V}|)$ computations. When used as a subroutine in a greedy influence maximization approach, ConTinEst is guaranteed to find a set of $C$ nodes with the influence of at least $(1 - 1/e)OPT - 2C\epsilon$, where $OPT$ is the optimum value. Experiments on both synthetic and real-world data show that ConTinEst can easily scale up to networks of millions of nodes while significantly improves over previous state-of-the-arts in terms of the accuracy of the estimated influence and the quality of the selected nodes in maximizing the influence.
+					</p>
+
+
+    				</div>
+    			</div>
+
+
+    			<div class="row">
+    				<div class = "span12" id="Papers">
+    					<p align="justify">
+    					<h3>Papers</h3>
+					</p>
+
+					<p class="text-left"><strong>Scalable Influence Estimation in Continuous-Time Diffusion Networks </strong>(<font color="FireBrick"><strong>Outstanding Paper Award </strong></font>, full oral presentation). Nan Du, Le Song, Manuel Gomez Rodriguez, and Hongyuan Zha. Neural Information Processing Systems (<strong>NIPS</strong>). Dec. 5 - Dec. 10, 2013,  Lake Tahoe, Nevada, USA. <a href="pdf/DuSonZhaMan-NIPS-2013.pdf">[PAPER]</a> <a href="pdf/slide.pdf">[SLIDE]</a><a href="pdf/poster.pdf">[POSTER]</a><a href="bib/DuSonGomZha13.bib">[Bibtex]</a></p>
+
+
+    				</div>
+    			</div>
+
+    			 <div class="row">
+    				<div class = "span12" id="Download">
+    					<p align="justify">
+    					<h3>Download</h3>
+					</p>
+
+					<p align = "justify"><strong>Terms of agreement</strong>. We appreciate your interest in our research. The C++ implementation is provided and maintained for our research projects conducted in the School of Computational Science and Engineering at Georgia Institute of Technology. All rights of the source code implementations are reserved. Comments, bugs, and suggestions, if any, can be directed to <a href="index.html"><strong>Nan Du</strong></a> (dunan AT gatech.edu). Redistributions and use of them in source or binary forms, with or without modification, are permitted only to academic purposes. If you use this code, or any part of it, please cite our paper as </p>
+
+					<div class="well">
+        						<p align="justify"> @inproceedings{DuSonGomZha13,
+						  title={Scalable Influence Estimation in Continuous-Time Diffusion Networks},
+						  author={Nan Du and Le Song and Manuel Gomez-Rodriguez and Hongyuan Zha},
+						  booktitle={Advances in Neural Information Processing Systems (NIPS)},
+						  year={2013}
+						}</p>
+      					</div>
+
+      					<p align="justify">	
+					This code is provided free for non-commercial use under the terms of the GNU General Public License. The current version is the 1.0 and has been released on August 27, 2013. 
+					
+
+					THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+					
+					It is understood that by downloading any item from this Web page and the pages linked to by this page, one has entirely understood and fully acknowledged to agree all of the terms.
+					</p>
+
+					<h4><a href="codes/ConTinEst.tgz" class="btn btn-lg btn-primary">Download ConTinEst !</a></h4>
+
+				</div>
+
+    			</div>
+
+
+    			<div class="row">
+    				<div class = "span12" id="Doc">
+    					<p align="justify">
+    					<h3>Documentation</h3>
+					</p>
+
+					<p align="justify">
+
+						<strong>Input network format</strong>. We include a sample network (1,024 nodes) in the implementation. The input file "std_weibull_DAG_core-1024-1-network.txt" consists of two blocks separated by a blank line. The node ID starts from 0 to 1,023. In the 1st block, each line has the format 
+
+					</p>
+
+					<div class="well">
+        						<p align="justify"> 
+        							<strong>node ID, node Name</strong>
+						</p>
+      					</div>
+
+      					<p align="justify">
+
+      						In the 2nd block, each line represents a directed edge from node ID1 to node ID2 with the following format.
+
+      					</p>
+
+      					<div class="well">
+        						<p align="justify"> 
+        							<strong>node ID1, node ID2, shape, scale</strong>
+						</p>
+      					</div>
+
+      					<p align="justify">
+
+      						Because we assume the most general form for the pairwise transmission function, for the simplicity of the demo code, we take the <a href="http://en.wikipedia.org/wiki/Weibull_distribution">Weibull Distribution</a> as the transmission function with the two parameters <strong>shape</strong> and <strong>scale</strong>, respectively. When $shape = 1.0$, it is reduced to the <a href="http://en.wikipedia.org/wiki/Exponential_distribution">exponential distribution</a>; When $shape = 2.0$, it is equivalent to the <a href="http://en.wikipedia.org/wiki/Rayleigh_distribution">Rayleigh Distribution</a>.  A valid network format can be the following.
+
+      					</p>
+
+      					<div class="well">
+        						<p align="justify"> 
+        							0,0<br>
+        							1,1<br>
+        							2,2<br>
+        							<br>
+        							0,1,0.0959956,0.0888947<br>
+        							0,2,3.95348,9.42268<br>
+        							1,2,1.61835,8.38794<br>
+						</p>
+      					</div>
+
+      					<p align="justify">The implementation consists of the following five classes </p>
+
+      					<ul>
+      						<li><strong>Graph</strong> encapsulates basic graph operations based on the adjacent-list representation.</li>
+      						<li><strong>ConTinEst</strong> encapsulates the implementation for influence estimation and maximization.</li>
+      						<li><strong>Simulation</strong> encapsulates the implementation for naive sampling method.</li>
+      						<li><strong>SimpleRNG</strong> implements several basic density functions.</li>
+      						<li><strong>TestModules</strong> implements basic unit tests.</li>
+      					</ul>
+
+					 <blockquote>
+					 	<h4>Class Graph</h4>
+					 </blockquote>
+				
+      					
+      					<p align="justify">Graph has the following properties. </p>
+      					<ul>
+      						<li><strong>N</strong> : number of nodes.</li>
+      						<li><strong>nodes</strong> : array of nodes, each of which stores a set of parents and children, respectively.</li>
+      						<li><strong>edge_weight</strong> : stores the sampled transmission time for each edge.</li>
+      						<li><strong>edge_parameter</strong> : stores the parameters of the transmission function for each edge.</li>
+      						<li><strong>RNG</strong> : generates samples from the Weibull distribution.</li>
+      						<li><strong>filename</strong> : the input graph file name.</li>
+      					</ul>
+
+      					<p align="justify">Graph has the following methods.</p>
+      					<div class="well">
+        						<h5>Graph(string g_filename, unsigned numNodes)</h5>
+        						<p align="justify">The constructor function where </p>
+        						<ul>
+        							<li><strong>g_filename</strong> : the name of the input graph file.</li>
+        							<li><strong>numNodes</strong> : number of nodes in the graph.</li>
+        						</ul>
+      					</div>
+
+      					<div class="well">
+        						<h5>void LoadWeibullFormatNetwork(string splitter, bool reverse);</h5>
+        						<p align="justify">Read network structure from the input graph file.</p>
+        						<ul>
+        							<li><strong>splitter</strong> : the delimiter to separate each line. Default is comma.</li>
+        							<li><strong>reverse</strong> : indicate whether the directed edge is revered or not.</li>
+        						</ul>	
+      					</div>
+
+      					<div class="well">
+        						<h5>void SampleEdgeWeightWbl();</h5>
+        						<p align="justify">Draw samples from the pairwise transmission functions for each edge.</p>
+      					</div>
+
+      					<div class="well">
+        						<h5>void PrintWblNetwork();</h5>
+        						<p align="justify">An utility function to print the loaded network.</p>
+      					</div>
+
+      					<div class="well">
+        						<h5>pair&lt;unsigned, unsigned&gt; MaximumOutDegree();</h5>
+        						<p align="justify">An utility function to find the node with the maximum out-degree. Return a pair of (node ID, out-degree)</p>
+      					</div>
+
+
+      					 <blockquote>
+					<h4>Class ConTinEst</h4>
+					</blockquote>
+
+					<p align="justify">ConTinEst has the following properties. </p>
+      					<ul>
+      						<li><strong>m_num_samples</strong> : number of sampled sets of pairwise transmission times.</li>
+      						<li><strong>m_num_rankings</strong> : number of sampled sets of random labels per node.</li>
+      						<li><strong>m_TableList</strong> : stores the least-label list for each node given a particular set of transmission times and a specific set of random labels.</li>
+      						<li><strong>m_keys</strong> : stores the random labels for each node given a particular set of transmission times for each edge.</li>
+      						<li><strong>m_RNG</strong> : generates samples from the Weibull distribution.</li>
+      						<li><strong>*m_G_inverse</strong> : pointer to a preloaded graph object.</li>
+      					</ul>
+
+      					<p align="justify">ConTinEst has the following methods. </p>
+      					<div class="well">
+        						<h5>ConTinEst(Graph *G, unsigned num_samples, unsigned num_rankings);</h5>
+        						<p align="justify">The constructor function where </p>
+        						<ul>
+        							<li><strong>*G</strong> : pointer to an initiated graph object.</li>
+        							<li><strong>num_samples</strong> : number of sampled sets of pairwise transmission times, Default 10000.</li>
+        							<li><strong>num_rankings</strong> : number of sampled sets of random labels per node, Default 5.</li>
+        						</ul>
+      					</div>
+
+      					<div class="well">
+        						<h5>void LeastElementListsSet(float *d, const pair&lt;float, unsigned&gt; *key_node_pairs, vector&lt;pair&lt;float, unsigned&gt; &gt; *lists);</h5>
+        						<p align="justify">Generate least-label lists for each node given a sampled set of transmission times, and a sampled set of random labels. </p>
+        						<ul>
+        							<li><strong>*d</strong> : a set of random labels</li>
+        							<li><strong>key_node_pairs</strong> : a mapping from label value to node ID.</li>
+        							<li><strong>*lists</strong> : store least-label lists for each node.</li>
+        						</ul>
+      					</div>
+
+      					<div class="well">
+        						<h5>void GetLeastElementLists();</h5>
+        						<p align="justify">Generate all least-label lists for each node based on the required number of sampled sets of pairwise transmission times (m_num_samples), and the number of sampled sets of labels (m_num_rankings).</p>
+      					</div>
+
+      					<div class="well">
+        						<h5>float EstimateNeighborhood(const set&lt;unsigned&gt;&amp; sources, float T);</h5>
+        						<p align="justify">Estimate the influence of a given set of sources by time T.</p>
+        						<ul>
+        							<li><strong>sources</strong> : a given set of source nodes.</li>
+        							<li><strong>T</strong> : the observation window T, Default 10.</li>
+        						</ul>
+      					</div>
+
+      					<div class="well">
+        						<h5>set&lt;unsigned&gt; LZGreedy(double T, unsigned K);</h5>
+        						<p align="justify">Maximize the influence using the greedy algorithm.</p>
+        						<ul>
+        							<li><strong>T</strong> : the observation window T, Default 10.</li>
+        							<li><strong>K</strong> : the size of the source set.</li>
+        						</ul>
+      					</div>
+
+      					<div class="well">
+        						<h5>vector&lt;set&lt;unsigned&gt; &gt; Optimize(const vector&lt;double&gt;&amp; setT, const vector&lt;unsigned&gt;&amp; setK);</h5>
+        						<p align="justify">Return the set of selected sources with different sizes at different time.</p>
+        						<ul>
+        							<li><strong>setT</strong> : a sequence of time window.</li>
+        							<li><strong>setK</strong> : a sequence of numbers of the selected sources.</li>
+        						</ul>
+      					</div>
+
+      					 <blockquote>
+					<h4>Compile on Linux/MacOS</h4>
+					</blockquote>
+					<p align="justify">To compile the sources, simply type the following to get the executable file with the name <em>execute</em></p>
+					<div class="well">
+        						<p align="justify">tar -zxvf ConTinEst.tgz</p>
+        						<p align="justify">cd ConTinEst</p>
+        						<p align="justify">make</p>
+      					</div>
+
+      					<blockquote>
+      					<h4>Run the demo on Linux/MacOS</h4>
+      					</blockquote>
+      					<p align="justify">To run the demo code within the directory <em>ConTinEst</em>, simply type</p>
+					<div class="well">
+        						<p align="justify">./execute</p>
+      					</div>
+      					<p align="justify">The demo code first loads the network file and calculate the least-label lists for each node.</p>
+      					<div class="well">
+        						<p align="justify">std_weibull_DAG_core-1024-1-network.txt<br>
+						Get all least-label lists : 10000 sets of transmission times; 5 sets of random labels; done
+						</p>
+      					</div>
+
+      					<p align="justify">Then, it finds the node with the maximum out-degree.</p>
+      					<div class="well">
+        						<p align="justify">node 0 has the largest out-degree 24
+						</p>
+      					</div>
+
+      					<p align="justify">Next, it compares the estimated influence at different time given by ConTinEst with that given by the naive simulation for the node with the largest out-degree.</p>
+      					<div class="well">
+        						<p align="justify">
+							Estimate Influence T = 1 done<br>
+
+							Simulation Check T = 1  with 10000 samples<br>
+							ConTinEst : 7.70149<br>
+							Simulation : 7.6682<br><br>
+
+							Estimate Influence T = 2 done<br>
+
+							Simulation Check T = 2  with 10000 samples<br>
+							ConTinEst : 14.0139<br>
+							Simulation : 13.8913<br><br>
+
+							Estimate Influence T = 3 done<br>
+
+							Simulation Check T = 3  with 10000 samples<br>
+							ConTinEst : 24.2149<br>
+							Simulation : 24.1826<br><br>
+
+							Estimate Influence T = 4 done<br>
+
+							Simulation Check T = 4  with 10000 samples<br>
+							ConTinEst : 38.9468<br>
+							Simulation : 39.0016<br><br>
+
+							Estimate Influence T = 5 done<br>
+
+							Simulation Check T = 5  with 10000 samples<br>
+							ConTinEst : 57.3021<br>
+							Simulation : 57.9743<br><br>
+
+							Estimate Influence T = 6 done<br>
+
+							Simulation Check T = 6  with 10000 samples<br>
+							ConTinEst : 79.7948<br>
+							Simulation : 79.656<br><br>
+
+							Estimate Influence T = 7 done<br>
+
+							Simulation Check T = 7  with 10000 samples<br>
+							ConTinEst : 104.704<br>
+							Simulation : 104.389<br><br>
+
+							Estimate Influence T = 8 done<br>
+
+							Simulation Check T = 8  with 10000 samples<br>
+							ConTinEst : 133.896<br>
+							Simulation : 133.148<br><br>
+
+							Estimate Influence T = 9 done<br>
+
+							Simulation Check T = 9  with 10000 samples<br>
+							ConTinEst : 163.586<br>
+							Simulation : 163.121<br><br>
+
+							Estimate Influence T = 10 done<br>
+
+							Simulation Check T = 10  with 10000 samples<br>
+							ConTinEst : 192.411<br>
+							Simulation : 192.212<br><br>
+						</p>
+      					</div>
+
+      					<p align="justify">Finally, it selects the 10 sources that can achieve the largest expected number of infected nodes by time 10.</p>
+      					<div class="well">
+        						<p align="justify">Influence Maximization by selecting 10 nodes with T = 10 done<br>
+						selected sources : 0;1;2;4;10;16;17;524;890;929;
+						</p>
+      					</div>
+
+
+    				</div>
+    			</div>
+
+
+
+    		</div>
+
+    			
+
+	</body>
+
+
+
+</html>

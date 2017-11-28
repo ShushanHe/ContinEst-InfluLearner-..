@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset = "htf-8">
+
+		 <!-- Bootstrap -->
+    		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+	</head>
+
+	<body>
+
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+    		<script src="js/bootstrap.min.js"></script>
+
+  <div class="container"> 
+
+    			<div class="row">
+    				<div class = "span12">
+    					<h3>Influence Function Learning in Information Diffusion Networks</h3>
+    				</div>
+    			</div>
+
+			<div class="navbar">
+	          			
+	          			<div class="navbar-inner">
+	            				
+	            				<div class="container">
+	              					
+	              					<ul class="nav">
+	                						
+	                    					<li class="active"><a href="#about">About InfluLearner</a></li>
+	                   					<li><a href="#Papers">Papers</a></li>
+						            <li><a href="#Download">Download</a></li>
+						            <li><a href="#Doc">Documentation</a></li>
+					                    	<li><a href="index.html">Contact</a></li>
+
+					              </ul>
+					           </div>
+				        </div>
+			</div>
+
+
+			<div class="row">
+    				<div class = "span12">
+    					<p align="justify">
+    					The rising role of on-line social networks in the information diffusion leads to increasing interest in viral marketing and on-line advertisement campaign. An essential task of a campaign is to evaluate the potential influence of a given set of users, that is, the expected number of follow-ups who will be influenced by this set of selected users before some given time T. 
+    					</p>
+
+    					<p align="justify">
+              In practice, however, the influence function is unknown to us. Even the specific diffusion paths and the true diffusion processes may be latent and hard to observe. Instead, we normally can collect the temporal information induced from the underlying diffusion process. For instance, after people get sick, they go to see the doctor, so we can observe approximately when they got infected. Based on these temporal information, existing approaches first fit an information diffusion model and then evaluate the influence function based on the learned model accordingly. However, there still remain many challenges in this two-step paradigm. Real world information diffusion is complicated, and it is nontrivial to determine the most suitable diffusion model in practice. The true diffusion process might even be never known. Thus, a particularly chosen diffusion model may be wrong compared to real world data and lead to large bias. Moreover, because the diffusion network structure is often hidden from us, we then need to infer both the parameters in the diffusion model and the diffusion network structure. Due to the limited amount of training data, the recovered diffusion structure may be inaccurate which will lead to another source of errors to the influence estimation. Finally, given a specific diffusion model, the exact calculation of the influence function is also hard which often requires additional approximation approaches.
+              </p>
+
+              <p align="justify">   
+    					If the purpose is only to estimate the influence, can we learn the influence value of a given source set directly from the cascade data ? In this <a href="pdf/DuLiaBalSon-ICML-2014.pdf"><strong>ICML 2014 paper </strong></a>, we provide a positive answer to this question. Without making any prior assumptions about the latent diffusion models, we seek to directly formulate the influence function itself by explicitly exploiting the property that the influence functions in many specific diffusion models are coverage functions. Theoretically, we show that the proposed algorithm <strong>InfluLearner </strong> can learn the influence with low sample complexity, and our empirical studies on real world datasets also confirm our method outperforms traditional two-stage approaches.
+    					</p>
+
+    				</div>
+    </div>
+
+    <div class="row" id="about">
+    				<div class = "span12">
+    					<p>
+    					<h3>About InfluLearner</h3>
+					</p>
+
+					<p align="justify">
+						<strong>InfluLearner</strong> is a scalable algorithm for learning the influence function in information diffusion networks. Its current implementation is in MATLAB but can be trivially parallelized by using MPI. In the Download section, we also provide a simulator to generate synthetic networks and cascades based on the continuous-time independent cascade model.
+					</p>
+
+    				</div>
+    </div>
+
+
+    <div class="row">
+    				<div class = "span12" id="Papers">
+    					<p>
+    					<h3>Papers</h3>
+					</p>
+
+					<p align="justify"><strong>Influence Function Learning in Information Diffusion Networks</strong>. Nan Du, Yingyu Liang, Maria-Florina Balcan, and Le Song. International Conference on Machine Learning (<strong>ICML</strong>). June 21 - June 26, 2014, Beijing, China. <a href="pdf/DuLiaBalSon-ICML-2014.pdf">[PAPER]</a> <a href="bib/DuLiaBalSon14A.bib">[Bibtex]</a></p>
+
+
+    				</div>
+    </div>
+
+    <div class="row">
+    				<div class = "span12" id="Download">
+    					<p>
+    					<h3>Download</h3>
+					</p>
+
+					<p align="justify"><strong>Terms of agreement</strong>. We appreciate your interest in our research. The C++ implementation is provided and maintained for our research projects conducted in the School of Computational Science and Engineering at Georgia Institute of Technology. All rights of the source code implementations are reserved. Comments, bugs, and suggestions, if any, can be directed to <a href="index.html"><strong>Nan Du</strong></a> (dunan AT gatech.edu). Redistributions and use of them in source or binary forms, with or without modification, are permitted only to academic purposes. If you use this code, or any part of it, it will be appreciated to cite our paper as </p>
+
+					<div class="well">
+        						<p> @inproceedings{DuLiaBalSon14A, title={Influence Function Learning in Information Diffusion Networks}, author={Nan Du and Yingyu Liang and Maria-Florina Balcan and Le Song}, booktitle={International Conference on Machine Learning (ICML)}, year={2014}}
+						        </p>
+      					</div>
+
+      		<p align="justify">	
+					This code is provided free for non-commercial use under the terms of the GNU General Public License. The current version is the 1.0 and has been released on December 28, 2014. 
+					
+
+					THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+					
+					It is understood that by downloading any item from this Web page and the pages linked to by this page, one has entirely understood and fully acknowledged to agree all of the terms.
+					</p>
+
+					<h4><a href="codes/InfluLearner.tgz" class="btn btn-lg btn-primary">Download InfluLearner !</a></h4>
+          <h4><a href="codes/KroneckerNetworkAndCascadeGenerator.tgz" class="btn btn-lg btn-primary">Download Simulator !</a></h4>
+
+				</div>
+
+    </div>
+
+
+    <div class="row">
+    				<div class = "span12" id="Doc">
+    					<p>
+    					   <h3>Documentation of InfluLearner</h3>
+					    </p>
+
+					<p align="justify">
+
+						<strong>Input network format of synthetic data</strong>. We include a small sample network (1,024 nodes) in the implementation. The input file "weibull_kronecker-n1024-e1126-0-network" consists of two blocks separated by a blank line. The node ID starts from 0 to 1,023. In the 1st block, each line has the format 
+
+					</p>
+
+					<div class="well">
+        						<p> 
+        							<strong>node ID, node Name</strong>
+						</p>
+      					</div>
+
+      					<p>
+
+      						In the 2nd block, each line represents a directed edge from node ID1 to node ID2 with the following format.
+
+      					</p>
+
+      					<div class="well">
+        						<p> 
+        							<strong>node ID1, node ID2, shape, scale</strong>
+						</p>
+      					</div>
+
+      					<p>
+
+      						Because we assume the most general form for the pairwise transmission function, for the simplicity of the demo code, we take the <a href="http://en.wikipedia.org/wiki/Weibull_distribution">Weibull Distribution</a> as the transmission function with the two parameters <strong>shape</strong> and <strong>scale</strong>, respectively. When $shape = 1.0$, it is reduced to the <a href="http://en.wikipedia.org/wiki/Exponential_distribution">exponential distribution</a>; When $shape = 2.0$, it is equivalent to the <a href="http://en.wikipedia.org/wiki/Rayleigh_distribution">Rayleigh Distribution</a>.  A valid network format can be the following.
+
+      					</p>
+
+      					<div class="well">
+        						<p> 
+        							0,0<br>
+        							1,1<br>
+        							2,2<br>
+        							<br>
+        							0,1,0.0959956,0.0888947<br>
+        							0,2,3.95348,9.42268<br>
+        							1,2,1.61835,8.38794<br>
+						        </p>
+      					</div>
+
+      					<p align="justify">
+
+							<strong>Input cascade format of synthetic data</strong>. A synthetic cascade is a sequence of the following triplet : 
+
+						</p>
+
+						<div class="well">
+        						<p> 
+        							<strong>
+        								source ID; node ID; time;
+        							</strong>
+						        </p>
+      					</div>
+      					<p align = "justify"> which indicates the node with ID <strong>node ID</strong> was infected by the source with ID <strong>source ID</strong> at this <strong>time</strong>. For the sources, we have <strong>node ID = source ID</strong> and <strong>time = 0</strong>. For instance, in the following cascade </p>
+      					<div class="well">
+        						<p> 
+        							<strong>
+        								46;46;0;184;184;0;740;740;0;184;790;3.68969;46;851;3.91851;
+        							</strong>
+						        </p>
+      					</div>
+      					<p align = "justify">46, 184, and 740 are the sources. 184 infects 790 at time 3.68969, and 46 infects 851 at time 3.91851.</p>
+
+      					<p align="justify">
+
+							<strong>Input cascade format of real data</strong>. A real cascade is a sequence of the following triplet : 
+
+						</p>
+
+						<div class="well">
+        						<p> 
+        							<strong>
+        								node ID1; post ID; time1; node ID2; post ID; time2; ...
+        							</strong>
+						        </p>
+      					</div>
+      					<p align = "justify"> which indicates the node with ID <strong>node ID1</strong> was infected at <strong>time1</strong>. <strong>post ID</strong> is reserved to indicate the group, which is unused here. Since real world cascades only have single source, the first node is always the source. For instance, in the following cascade for post 0 </p>
+      					<div class="well">
+        						<p> 
+        							<strong>
+        								0,0,0,6,0,0.061667,942,0,8.05
+        							</strong>
+						        </p>
+      					</div>
+      					<p align = "justify">node 0 is the source. node 6 and 942 are infected at 0.061667 and 8.05, respectively.</p>
+
+
+      					<p>The implementation consists of the following functions : </p>
+
+                <div class="well">
+                    <h5>function InfluLearner (network_filename, source_filename, num_samples, beginning, ending, N)</h5>
+                    <p>Main function to learn the influence function on the synthetic data.</p>
+                    <ul>
+                      <li><strong>network_filename</strong> : input network.</li>
+                      <li><strong>source_filename</strong> : input file of selected sources for training.</li>
+                      <li><strong>num_samples</strong> : number of cascades generated from each source.</li>
+                      <li><strong>beginning</strong> and <strong>ending</strong>: because the learning procedure is independent for each node, these parameters indicate which nodes are involved in each task. You can start from 1 and finish at 1,024, which means you run the code sequentially in a single task. Or, you can split into two tasks. The first task starts from node 1 to node 512 by calling <strong> InfluLearner(network_filename, source_filename, num_samples, 1, 512, N)</strong>, and the second task starts from node 513 to node 1,024 by calling <strong>InfluLearner(network_filename, source_filename, num_samples, 513, 1024, N)</strong>, respectively.</li>
+                      <li><strong>N</strong> : number of nodes.</li>
+                    </ul> 
+                </div>
+
+                <div class="well">
+                    <h5>function InfluLearnerReal(cascade_filename_train, N, T, beginning, ending)</h5>
+                    <p>Main function to learn the influence function on the real world data.</p>
+                    <ul>
+                      <li><strong>cascade_filename_train</strong> : input cascades.</li>
+                      <li><strong>N</strong> : number of nodes.</li>
+                      <li><strong>T</strong> : observation window.</li>
+                      <li><strong>beginning</strong> and <strong>ending</strong>: because the learning procedure is independent for each node, these parameters indicate which nodes are involved in each task. </li>
+                      
+                    </ul> 
+                </div>
+
+                <div class="well">
+                    <h5>function [A, shape, scale] = readNetwork(network_filename,N)</h5>
+                    <p>Read input graph file.</p>
+                    <ul>
+                      <li><strong>network_filename</strong> : input network file for training.</li>
+                      <li><strong>N</strong> : number of nodes.</li>
+                      <li><strong>A, shape and scale</strong> : matrices to store the edge weights, respectively.</li>
+                    </ul> 
+                </div>
+
+                <div class="well">
+                    <h5>function test(num_samples, network_filename, source_filename)</h5>
+                    <p>Test the model performance on the testing dataset of synthetic cascades.</p>
+                    <ul>
+                      <li><strong>num_samples</strong> : number of cascades generated from each source.</li>
+                      <li><strong>network_filename</strong> : input network.</li>
+                      <li><strong>source_filename</strong> : input file of selected sources for testing.</li>
+                    </ul> 
+                </div>
+
+                <div class="well">
+                    <h5>function testReal(filenumber)</h5>
+                    <p>Test the model performance on the testing dataset of real cascades.</p>
+                    <ul>
+                      <li><strong>filenumber</strong> : the testing cascades of real world data have the filenames as <strong>cascade-1000-<em>filenumber</em>-test</strong>, so this parameter indicates which testing file to use.</li>
+                    </ul> 
+                </div>
+
+                <div class="well">
+                    <h5>function [obj,gradient] = objFunction(w, phi, y_j)</h5>
+                    <p>Objective function implementation.</p>
+                    <ul>
+                      <li><strong>w</strong> : model parameters to learn.</li>
+                      <li><strong>phi</strong> : input random features.</li>
+                      <li><strong>y_j</strong> : input labels of being infected or not.</li>
+                      <li><strong>obj</strong> : returned objective function value.</li>
+                      <li><strong>gradient</strong> : returned gradient.</li>
+                    </ul> 
+                </div>
+
+                <blockquote>
+      					<h4>Compile on Linux/MacOS</h4>
+      					</blockquote>
+      					
+                <p>To compile the sources, simply run the following function in MATLAB</p>
+      					<div class="well">
+              						<p>mexAll</p>					
+            		</div>
+
+            		<blockquote>
+            		<h4>Run the demo on Linux/MacOS</h4>
+            		</blockquote>
+            		
+                <p>To run the demo code within the directory <em>InfluLearner</em> on synthetic data, simply type</p>
+      					      
+                <div class="well">
+        						<p>InfluLearner('weibull_kronecker-n1024-e1126-0-network','synthetic_sources_0', 8, 1, 1024, 1024)</p>
+      					</div>
+
+      					<p align="justify">This indicates that the network structure file is 'weibull_kronecker-n1024-e1126-0-network', the directory 'synthetic_sources_0' contains all the training data, we use 8 cascades per source set, we start the computation from node 1 to the last node 1024, and there are 1024 nodes in total. This function will store the results containing the random features in the directory</p>
+
+                <div class="well"> ./synthetic/synthetic_sources_0/result-train_cascade_C8_weibull_kronecker-n1024-e1126-0-network </div>
+            					
+      					<p>Next, to test the performance of the algorithm, run the following function</p>
+      					<div class="well">
+                  
+        						test(8, 'weibull_kronecker-n1024-e1126-0-network', 'synthetic_sources_0')
+
+      					</div>
+
+      					<p>This means we test our model on the 'weibull_kronecker-n1024-e1126-0-network' file with the 'synthetic_sources_0' source set file with 8 sample cascades per source set.</p>
+
+      			<p>To run the demo code within the directory <em>InfluLearner</em> on real data, simply type</p>
+      					      
+                <div class="well">
+        						<p>InfluLearnerReal('cascade-1000-0-train', 1000, 15, 1, 1000)</p>
+      					</div>
+
+      					<p align="justify">This indicates that on the input cascade file 'cascade-1000-0-train' with 1,000 nodes, we learn the influence function from node 1 to 1,000. This function will store the results containing the random features in the directory</p>
+
+                <div class="well"> ./real/result_cascade-1000-0-train</div>
+            					
+      					<p>Next, to test the performance of the algorithm, run the following function</p>
+      					<div class="well">
+                  
+        						testReal(0)
+
+      					</div>
+
+      					<p>This means we test our model on the respective testing cascade file 'cascade-1000-0-test'.</p>
+
+                
+                 <h3>Documentation of Simulator</h3>
+                 <blockquote>
+                    <h4>Compile on Linux/MacOS</h4>
+                </blockquote>
+                <div class="well">
+                      <p>tar -zxvf KroneckerNetworkAndCascadeGenerator.tgz</p>
+                      <p>cd KroneckerNetworkAndCascadeGenerator</p>
+                      <p>make</p>
+                </div>
+                <p align = "justify"> This will generate two the following two executables </p>
+                <ul>
+                      <li><strong>GenerateNetwork</strong> for producing Kronecker synthetic networks.</li>
+                      <li><strong>GenerateCascades</strong> for simulating cascades.</li>
+                </ul> 
+
+                 <blockquote>
+                    <h4>Run GenerateNetwork</h4>
+                </blockquote>
+
+                <div class="well">
+                      <p>./GenerateNetwork</p>
+                      Generate synthetic kronecker networks. build: 00:28:46, Dec 29 2014. Time: 00:34:10 [Dec 29 2014]<br>
+                      ==================================================================================================<br>
+                      usage: GenerateNetwork <br>
+                      -g:Parameters for the network (default:0.9 0.5; 0.5 0.9) <br>
+                      -n:Number of nodes (default:1024) <br>
+                      -e:Number of edges (default:1126) <br>
+                      -a:Minimum and maximum value for weibull shape (default:1;10)<br>
+                      -b:Minimum and maximum value for weibull scale (default:1;10)<br>
+                      -f:Name of the network (default:weibull_kronecker_synthetic)<br>
+                      RMat Kronecker: 1024 nodes, 1126 edges, Directed...<br>
+                      collisions: 2 (0.0018)<br>
+                      run time: 0.00s (00:34:10)<br>
+                </div>
+                <p align="justify">This will generate an example file with the default filename <strong>weibull_kronecker_synthetic</strong> under the current directory. You can then change the respective parameters to meet your requirements.</p>
+
+                <blockquote>
+                    <h4>Run GenerateCascades</h4>
+                </blockquote>
+
+                <div class="well">
+                      <p>./GenerateCascades</p>
+                      Generate synthetic cascades. build: 00:45:13, Dec 29 2014. Time: 00:45:21 [Dec 29 2014]<br>
+                      ==================================================================================================<br>
+                      usage: GenerateCascades <br>
+                      -n:Number of nodes (default:1024) <br>
+                      -c:Number of cascades per source (default:128)<br>
+                      -fg:Name of the network (default:weibull_kronecker_synthetic)<br>
+                      -fc:Name of the network (default:weibull_kronecker_synthetic_cascade)<br>
+                </div>
+                <p align="justify">This will generate another example file with the default filename <strong>weibull_kronecker_synthetic_cascade</strong> under the current directory based on the default network file <strong>weibull_kronecker_synthetic</strong>. You can then change the respective parameters to meet your requirements.</p>
+
+    				</div>
+    </div>
+
+
+
+  </div>
+
+    			
+
+</body>
+
+
+
+</html>
